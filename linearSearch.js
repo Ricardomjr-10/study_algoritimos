@@ -13,5 +13,3 @@ if (result === -1) {
 } else {
     console.log('Found at index ' + result)
 }
-
-result

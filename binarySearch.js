@@ -16,3 +16,10 @@ function binarySearch (arr, x) {
     }
     return -1
 }
+
+let result = binarySearch([1, 2, 3, 4, 5], 5)
+if (result === -1) {
+    console.log('Nao encontrado')
+} else {
+    console.log('Encontrado na posicção' + result)
+}

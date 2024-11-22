@@ -4,6 +4,7 @@ function binarySearch (arr, x) {
     let high = arr.length -1
     while (low <= high) {
         mid = Math.floor((low + high) / 2)
+        ++low
     }
     if (arr[mid] === x) {
         return mid
@@ -17,9 +18,9 @@ function binarySearch (arr, x) {
     return -1
 }
 
-let result = binarySearch([1, 2, 3, 4, 5], 5)
+let result = binarySearch([1, 2, 3, 4, 5], 1)
 if (result === -1) {
     console.log('Nao encontrado')
 } else {
-    console.log('Encontrado na posicção' + result)
+    console.log('Encontrado na posicção ' + result)
 }

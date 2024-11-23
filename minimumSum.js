@@ -8,10 +8,11 @@ function minimumSum (arr) {
     for (let i = 0; i < arr.length; i++) { 
         if (arr[i] < arr[i + 1]) {
             arrayb.push(arr[i])
-            
+            sum += arr[i]
     }
     
 }
-return arrayb
+
+return sum
 }
 console.log(minimumSum(arrayA))

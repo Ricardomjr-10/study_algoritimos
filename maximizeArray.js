@@ -2,37 +2,30 @@ const array = [2, 1, 7]
 const number = 3
 const maxValue = 7
 
-function maximizeArray (arr, number, maxValue) {
-    const n = arr.length
-    const dp = new Array(n).fill(0).map(() => {
-        return new Array(maxValue + 1).fill(0)
-    })
+let ans = 0
 
-    if (0 <= number + arr[0] && number + arr[0] <= maxValue) {
-        dp[0][number + arr[0]] = 1
-    }
-    if (0 <= number - arr[0] && number - arr[0] <= maxValue) {
-        dp[0][number - arr[0]] = 1
+function maximizeArray(arr, n, num, maxLimit, ind) {
+    if (ind == n) {
+        ans = Math.max(ans, num)
+        return
     }
 
-    for (let i = 1; i < n; i++) {
-        for (let j = 0; j <= maxValue; j++) {
-            if (dp[i - 1][j] > 0) {
-                if (0 <= j + arr[i] && j + arr[i] <= maxValue) {
-                    dp[i][j + arr[i]] = Math.max(dp[i][j + arr[i]], dp[i - 1][j] + 1)
-                }
-                if (0 <= j - arr[i] && j - arr[i] <= maxValue) {
-                    dp[i][j - arr[i]] = Math.max(dp[i][j - arr[i]], dp[i - 1][j] + 1)
-                }
-            }
-        }
+    if (num - arr[ind] >= 0) {
+        maximizeArray(arr, n, num - arr[ind], maxLimit, ind + 1)
     }
-    let maxValReached = -1
-    for (let j = 0; j <= maxValue; j++) {
-        maxValReached = Math.max(maxValReached, dp[n - 1][j])
-    }
-    return maxValReached
 
+    if (num + arr[ind] <= maxLimit) {
+        maximizeArray(arr, n. num + arr[ind], maxLimit, ind + 1)
+    }
 }
 
-console.log(maximizeArray(array, number, maxValue))
+function findMaxVal (arr, n, num, maxLimit) {
+    let ind = 0
+    maximizeArray(arr, n, num, maxLimit, ind)
+    return ans
+}
+
+
+console.log(maximizeArray(array, array.length, number, maxValue))
+
+

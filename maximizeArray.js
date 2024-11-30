@@ -34,3 +34,5 @@ function maximizeArray (arr, number, maxValue) {
     return maxValReached
 
 }
+
+console.log(maximizeArray(array, number, maxValue))

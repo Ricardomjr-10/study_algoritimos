@@ -16,3 +16,5 @@ function minimumSum (arr) {
 return sum
 }
 console.log(minimumSum(arrayA))
+
+module.exports = minimumSum

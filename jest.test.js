@@ -3,6 +3,7 @@ const binarySearch = require('./binarySearch')
 const bubbleSort = require('./bubbleSort')
 const countingSort = require('./countSort')
 const search = require('./linearSearch')
+const minimumSum = require('./minimumSum')
 
 test('findMaxVal', () => {
     expect(findMaxVal([2, 1, 7], 3, 3, 7)).toBe(7)
@@ -22,4 +23,8 @@ test('countingSort', () => {
 
 test('search', () => {
     expect(search([1, 2, 3, 4, 5], 5)).toBe(4)
+})
+
+test('minimumSum', () => {
+    expect(minimumSum([3, 4])).toBe(3)
 })

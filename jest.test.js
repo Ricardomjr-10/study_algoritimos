@@ -1,6 +1,7 @@
 const findMaxVal= require('./maximizeArray')
 const binarySearch = require('./binarySearch')
 const bubbleSort = require('./bubbleSort')
+const countingSort = require('./countSort')
 
 test('findMaxVal', () => {
     expect(findMaxVal([2, 1, 7], 3, 3, 7)).toBe(7)
@@ -12,4 +13,8 @@ test('binarySearch', () => {
 
 test('bubbleSort', () => {
     expect(bubbleSort([7, 5, 6, 1, 3])).toEqual([1, 3, 5, 6, 7])
+})
+
+test('countingSort', () => {
+    expect(countingSort([2, 5, 3, 0, 2, 3, 0, 3])).toEqual([0, 0, 2, 2, 3, 3, 3, 5])
 })

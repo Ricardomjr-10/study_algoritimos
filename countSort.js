@@ -22,3 +22,5 @@ function countingSort(array) {
 
 const array = [2, 5, 3, 0, 2, 3, 0, 3];
 console.log(countingSort(array));
+
+module.exports = countingSort

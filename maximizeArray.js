@@ -36,11 +36,12 @@ function findMaxVal(arr, n, num, maxLimit)
 }
 
 
-let num = 3;
-let arr = [ 2, 1, 7];
-let n = arr.length;
-let maxLimit = 7;
+// let num = 3;
+// let arr = [ 2, 1, 7];
+// let n = arr.length;
+// let maxLimit = 7;
 
 
-console.log(findMaxVal(arr, n, num, maxLimit));
+// console.log(findMaxVal(arr, n, num, maxLimit));
 							
+module.exports = findMaxVal

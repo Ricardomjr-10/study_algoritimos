@@ -8,4 +8,13 @@ function maximizeArray (arr, number, maxValue) {
         return new Array(maxValue + 1).fill(0)
     })
 
+    if (0 <= number + arr[0] && number + arr[0] <= maxValue) {
+        dp[0][number + arr[0]] = 1
+    }
+    if (0 <= number - arr[0] && number - arr[0] <= maxValue) {
+        dp[0][number - arr[0]] = 1
+    }
+
+    
+
 }

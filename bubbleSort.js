@@ -14,3 +14,5 @@ function bubbleSort (arr) {
     return array
 }
 console.log(bubbleSort(array))
+
+module.exports = bubbleSort

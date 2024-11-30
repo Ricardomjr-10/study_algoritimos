@@ -27,5 +27,10 @@ function maximizeArray (arr, number, maxValue) {
             }
         }
     }
+    let maxValReached = -1
+    for (let j = 0; j <= maxValue; j++) {
+        maxValReached = Math.max(maxValReached, dp[n - 1][j])
+    }
+    return maxValReached
 
 }

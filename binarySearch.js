@@ -24,3 +24,5 @@ if (result === -1) {
 } else {
     console.log('Encontrado na posicção ' + result)
 }
+
+module.exports = binarySearch

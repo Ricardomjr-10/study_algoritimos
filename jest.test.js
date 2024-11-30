@@ -1,4 +1,5 @@
-const {findMaxVal, binarySearch }= require('./maximizeArray')
+const findMaxVal= require('./maximizeArray')
+const binarySearch = require('./binarySearch')
 
 test('findMaxVal', () => {
     expect(findMaxVal([2, 1, 7], 3, 3, 7)).toBe(7)
